@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.container, .form-card {
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+.topbar {
+    background: #0077cc;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #bbb;
+}
+
+.card small {
+    color: #888;
+}
+
+.card button {
+    margin-right: 5px;
+    background: #cc0000;
+}
+
+.filter {
+    padding: 15px;
+}
+
+.card.editing {
+    animation: fadeIn 0.4s ease forwards;
+    border: 2px solid #0077cc;
+    background-color: #f0f8ff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card input, 
+.card textarea {
+    transition: all 0.25s ease;
+}
+
+.card input:focus, 
+.card textarea:focus {
+    border-color: #0077cc;
+    background: #eef7ff;
+    transform: scale(1.01);
+}
